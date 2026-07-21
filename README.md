@@ -3,6 +3,8 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/pandas-analysis-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-notebook-F37626?logo=jupyter&logoColor=white)](notebooks/pizza_sales_analysis.ipynb)
+[![Analysis CI](https://github.com/danieltalbert/pizza-sales-performance-analysis/actions/workflows/analysis.yml/badge.svg)](https://github.com/danieltalbert/pizza-sales-performance-analysis/actions/workflows/analysis.yml)
+[![License: MIT](https://img.shields.io/badge/Code-MIT-D95D39.svg)](LICENSE)
 
 An exploratory analysis of a full year of pizza-shop transactions. The project turns 48,620 order-line records into a concise view of revenue, product performance, and demand patterns that can support menu and staffing decisions.
 
@@ -49,8 +51,8 @@ An exploratory analysis of a full year of pizza-shop transactions. The project t
 ## Run locally
 
 ```bash
-git clone https://github.com/danieltalbert/Final-Personal-CSE-450-Project.git
-cd Final-Personal-CSE-450-Project
+git clone https://github.com/danieltalbert/pizza-sales-performance-analysis.git
+cd pizza-sales-performance-analysis
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -63,9 +65,16 @@ To regenerate the dashboard and supporting figures:
 python src/create_dashboard.py
 ```
 
+The script accepts alternative inputs and output locations, which CI uses to verify reproducibility without modifying tracked figures:
+
+```bash
+python src/create_dashboard.py --data tests/fixtures/pizza_sales_sample.csv --output /tmp/pizza-figures
+python -m pytest -q
+```
+
 ## Dataset
 
-The included workbook covers transactions from January through December 2015. It contains 48,620 order lines and 12 original fields describing order timing, product, quantity, price, size, category, and ingredients. The analysis found no missing values or duplicate rows.
+The included workbook covers transactions from January through December 2015. It contains 48,620 order lines and 12 original fields describing order timing, product, quantity, price, size, category, and ingredients. The analysis found no missing values or duplicate rows. Maven Analytics identifies the fictitious dataset as public domain; full provenance, field definitions, and the validation contract are documented in [DATASET.md](DATASET.md).
 
 ## Tools
 
@@ -73,4 +82,8 @@ The included workbook covers transactions from January through December 2015. It
 - **Matplotlib** for reproducible data visualization
 - **Jupyter Notebook** for the documented exploratory workflow
 - **Excel / openpyxl** for workbook ingestion
+
+## License
+
+Original code and documentation are licensed under the [MIT License](LICENSE). The dataset is public domain and retains the provenance documented in [DATASET.md](DATASET.md).
 
