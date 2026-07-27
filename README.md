@@ -25,6 +25,13 @@ An exploratory analysis of a full year of pizza-shop transactions. The project t
 - **Classic** was the highest-revenue category at **$220,053.10**, and large pizzas produced **$375,318.70** in revenue.
 - **The Brie Carre Pizza** was the lowest-volume product at **490 pizzas sold**, making it a useful candidate for promotion, repositioning, or menu review.
 
+## Decision views
+
+| Staffing by hour | Staffing by day | Product focus |
+| --- | --- | --- |
+| ![Orders by hour with lunch and dinner demand peaks](reports/figures/orders_by_hour.png) | ![Orders by weekday with Friday as the busiest day](reports/figures/orders_by_weekday.png) | ![Top five pizzas ranked by revenue](reports/figures/top_5_pizzas_by_revenue.png) |
+| Lunch and dinner peaks suggest when additional coverage matters most. | Weekday comparison turns a calendar pattern into a scheduling input. | Revenue ranking separates commercially important products from unit-volume anecdotes. |
+
 ## Repository structure
 
 ```text
