@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this analysis or its implementation, please cite it as below."
+title: "Pizza Sales Performance Analysis"
+type: software
+authors:
+  - family-names: Talbert
+    given-names: Daniel
+repository-code: "https://github.com/danieltalbert/pizza-sales-performance-analysis"
+url: "https://github.com/danieltalbert/pizza-sales-performance-analysis"
+license: MIT
+version: 1.0.0
+date-released: 2026-07-20
+keywords:
+  - sales analytics
+  - data visualization
+  - pandas
+  - business intelligence
+  - reproducible research
