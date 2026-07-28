@@ -8,7 +8,20 @@
 
 An exploratory analysis of a full year of pizza-shop transactions. The project turns 48,620 order-line records into a concise view of revenue, product performance, and demand patterns that can support menu and staffing decisions.
 
-![Pizza sales performance dashboard](reports/figures/pizza_sales_dashboard.png)
+![Conceptual overhead restaurant scene where many order tickets resolve into lunch and dinner demand waves, product clusters, and a rising business signal](reports/figures/transaction-signals-hero.jpg)
+
+_Visual intuition: individual order lines become time, demand, product, and revenue signals. The charts below contain the measured evidence._
+
+## Start here
+
+| If you want to... | Go to |
+| --- | --- |
+| Read the decision-ready takeaways | [Key findings](#key-findings) |
+| Inspect the full dashboard | [Performance dashboard](#performance-dashboard) |
+| Compare focused decision views | [Decision views](#decision-views) |
+| Reproduce the analysis | [Run locally](#run-locally) |
+| Verify source and licensing | [Dataset](#dataset) · [DATASET.md](DATASET.md) |
+| Cite or extend the work | [CITATION.cff](CITATION.cff) · [Contributing](CONTRIBUTING.md) |
 
 ## Business questions
 
@@ -24,6 +37,10 @@ An exploratory analysis of a full year of pizza-shop transactions. The project t
 - **Friday** was the busiest day with **3,538 orders**. Demand concentrated around lunch (**12–1 PM**) and dinner (**5–7 PM**).
 - **Classic** was the highest-revenue category at **$220,053.10**, and large pizzas produced **$375,318.70** in revenue.
 - **The Brie Carre Pizza** was the lowest-volume product at **490 pizzas sold**, making it a useful candidate for promotion, repositioning, or menu review.
+
+## Performance dashboard
+
+![Pizza sales performance dashboard summarizing revenue, order volume, product leaders, weekday demand, and hourly demand](reports/figures/pizza_sales_dashboard.png)
 
 ## Decision views
 
@@ -54,6 +71,15 @@ An exploratory analysis of a full year of pizza-shop transactions. The project t
 3. Calculate headline KPIs and aggregate results by product, category, and size.
 4. Compare demand across weekdays and hours.
 5. Export focused charts and a one-page dashboard for presentation.
+
+```mermaid
+flowchart LR
+    A["48,620 order lines"] --> B["Validate fields and duplicates"]
+    B --> C["Derive time and product dimensions"]
+    C --> D["Aggregate revenue, volume, and demand"]
+    D --> E["Decision views"]
+    E --> F["Staffing, menu, and promotion questions"]
+```
 
 ## Run locally
 
@@ -93,4 +119,8 @@ The included workbook covers transactions from January through December 2015. It
 ## License
 
 Original code and documentation are licensed under the [MIT License](LICENSE). The dataset is public domain and retains the provenance documented in [DATASET.md](DATASET.md).
+
+For help reproducing the analysis, see [SUPPORT.md](SUPPORT.md). Proposed changes
+should follow [CONTRIBUTING.md](CONTRIBUTING.md), and sensitive reports should
+use the process in [SECURITY.md](SECURITY.md).
 
